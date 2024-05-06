@@ -1,3 +1,27 @@
 <app-header/>
-<div class="content">contane</div>
+<div class="content">
+  <div class="k">.</div>
+  <div class="k">.</div>
+    <table>
+        <tr>
+          <th>STT</th>
+          <th>Gói tập</th>
+          <th>Tên</th>
+          <th>Email</th>
+          <th>Giá</th>
+          <th>Sữa</th>
+          <th>Xóa</th>
+        </tr>
+        <tr *ngFor="let x of data;let i = index">
+          <td>{{i+1}}</td>
+          <td>{{x[1].goi}}</td>
+          <td>{{x[0].ten}}</td>
+          <td>{{x[0].email}}</td>
+          <td>{{x[1].price}}</td>
+          <td><i class="fa-solid fa-pen"></i></td>
+          <td><i class="fa-solid fa-trash"></i></td>
+        </tr>
+       
+      </table>
+</div>
 <app-footer/>

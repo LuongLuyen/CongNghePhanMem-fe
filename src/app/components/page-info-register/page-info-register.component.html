@@ -28,26 +28,38 @@
         <div class="info">
             <div>
                 <div>Email</div>
-                <input placeholder="email@.com"/>
+                <input placeholder="email@.com" [(ngModel)]="input.email"/>
             </div>
             <div>
                 <div>Tên</div>
-                <input placeholder="Tên"/>
+                <input placeholder="Tên" [(ngModel)]="input.ten"/>
             </div>
             <div>
                 <div>Tuổi</div>
-                <input placeholder="Tuổi"/>
+                <select  [(ngModel)]="input.tuoi">
+                    <option value="tre">16 đến 20 tuổi</option>
+                    <option value="trung nien">20 đến 50 tuổi</option>
+                    <option value="gia">trên 50 tuổi</option>
+                  </select>
             </div>
             <div>
                 <div>Chiều cao (cm)</div>
-                <input placeholder="Chiều cao"/>
+                <select  [(ngModel)]="input.chieuCao">
+                    <option value="thap">dưới 150 Cm</option>
+                    <option value="cao">trên 180 Cm</option>
+                    <option value="binh thuong">150 Cm đến 180 Cm</option>
+                  </select>
             </div>
             <div>
                 <div>Cân nặng (Kg)</div>
-                <input placeholder="Cân nặng"/>
+                <select  [(ngModel)]="input.canNang">
+                    <option value="gay">dưới 50 Kg</option>
+                    <option value="beo">trên 80 Kg</option>
+                    <option value="binh thuong">50 Kg đến 80Kg</option>
+                  </select>
             </div>
         </div>
-        <div class="btn">Xác nhận</div>
+        <div class="btn" (click)="postPackage()">Xác nhận</div>
     </div>
 </div>
 <app-footer/>

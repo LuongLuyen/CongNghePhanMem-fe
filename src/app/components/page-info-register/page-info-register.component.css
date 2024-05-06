@@ -22,6 +22,15 @@ input {
     margin: 5px;
     width: 250px;
 }
+select {
+    margin: 5px;
+    width: 260px;
+    
+}
+option {
+    height: 20px;
+
+}
 .info {
     display: flex;
     flex-direction: column;

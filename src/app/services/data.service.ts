@@ -3,6 +3,7 @@ import { BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 const api ="http://localhost:5000/api/gym"
+const apiP ="http://localhost:5000/api/register"
 @Injectable({
   providedIn: 'root'
 })
@@ -21,9 +22,15 @@ export class DataService {
   getAllGym():any {
     return this.http.get<any>(api);
   }
+  getAllPackage():any {
+    return this.http.get<any>(apiP);
+  }
   getByIdGym(id:string):any {
     if (id){
       return this.http.get<any>(api+"/"+id);
     }
+  }
+  postPackage(data:any):any {
+    return this.http.post<any>(apiP,data)
   }
 }
