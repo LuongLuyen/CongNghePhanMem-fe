@@ -1,1 +1,26 @@
-<p>header works!</p>
+<div class="header">
+    <div class="name">
+        <i class="fa-brands fa-square-pied-piper black"></i>
+        GYM
+    </div>
+    <div class="vach">.</div>
+    <div class="nav">
+        <a class="nav_item" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">
+            <i class="fa-solid fa-house"></i>
+            <span class="n">Trang chủ</span>
+        </a>
+        <a class="nav_item" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">
+            <i class="fa-solid fa-registered"></i>
+            <div class="n">Đăng ký gói tập</div>
+        </a>
+        <a class="nav_item" routerLink="/da-dang-ky" routerLinkActive="active" ariaCurrentWhenActive="page">
+            <i class="fa-solid fa-circle-check"></i>
+            <div class="n">Đã đăng ký</div>
+        </a>
+        <a class="nav_item" routerLink="/thanh-toan" routerLinkActive="active" ariaCurrentWhenActive="page">
+            <i class="fa-brands fa-paypal"></i>
+            <div class="n">Thanh toán</div>
+        </a>
+    </div>
+</div>
+<router-outlet></router-outlet>

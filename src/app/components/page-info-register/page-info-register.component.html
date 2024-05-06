@@ -1,0 +1,53 @@
+<app-header/>
+<div class="content">
+    <div *ngIf="data" class="content_product">
+        <div class="goi_tap">
+            <img class="img" src={{data.img}}/>
+            <div [class]="data.color"> {{data.goi}}</div>
+            <ul>
+                <li>
+                    {{data.item1}}
+                </li>
+                <li>
+                    {{data.item2}}
+                </li>
+                <li>
+                    {{data.item3}}
+                </li>
+                <li>
+                    {{data.item4}}
+                </li>
+            </ul>
+            <div class="content_footer">
+                <div class="price"> {{data.price}}<i class="fa-solid fa-dong-sign"></i>/tháng</div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="data" class="content_info">
+        <h1 class="m">Xác nhận thông tin</h1>
+        <div class="info">
+            <div>
+                <div>Email</div>
+                <input placeholder="email@.com"/>
+            </div>
+            <div>
+                <div>Tên</div>
+                <input placeholder="Tên"/>
+            </div>
+            <div>
+                <div>Tuổi</div>
+                <input placeholder="Tuổi"/>
+            </div>
+            <div>
+                <div>Chiều cao (cm)</div>
+                <input placeholder="Chiều cao"/>
+            </div>
+            <div>
+                <div>Cân nặng (Kg)</div>
+                <input placeholder="Cân nặng"/>
+            </div>
+        </div>
+        <div class="btn">Xác nhận</div>
+    </div>
+</div>
+<app-footer/>

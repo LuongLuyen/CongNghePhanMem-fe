@@ -1,0 +1,35 @@
+<app-header />
+<div class="content">
+    <div class="name">Các gói tập</div>
+    <div class="vach">.</div>
+    <div class="w-goitap">
+        <div class="goi_tap" *ngFor="let x of data">
+            <img class="img" src={{x.img}}/>
+            <div [class]="x.color"> {{x.goi}}</div>
+            <ul>
+                <li>
+                    {{x.item1}}
+                </li>
+                <li>
+                    {{x.item2}}
+                </li>
+                <li>
+                    {{x.item3}}
+                </li>
+                <li>
+                    {{x.item4}}
+                </li>
+            </ul>
+            <div class="content_footer">
+                <div class="price"> {{x.price}}<i class="fa-solid fa-dong-sign"></i>/tháng</div>
+                <div  class="content_btn">
+                    <a (click)="click(x.id)" class="nav_item" routerLink="/info-register" routerLinkActive="active" ariaCurrentWhenActive="page">
+                        Đăng ký
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer />
+<router-outlet></router-outlet>

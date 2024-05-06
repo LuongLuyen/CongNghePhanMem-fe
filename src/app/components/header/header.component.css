@@ -1,0 +1,37 @@
+.header {
+    background-color: #ad171c;
+    height: 10vh;
+    display: flex;
+}
+.name {
+    color: #fff;
+    font-size: 40px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+.nav_item {
+    width: 200px;
+    display: flex;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+.n {
+    margin-left: 10px;
+}
+.black {
+    color: black;
+}
+.vach {
+    background-color: #333;
+    color: #333;
+    margin-left: 50px;
+    height: 8vh;
+    margin-top: 8px;
+}

@@ -1,0 +1,102 @@
+.content {
+    background-color: rgb(216, 215, 215);
+    height: 80vh;
+    margin: 0 20px 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content_info {
+    background-color: #fff;
+    height: 500px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.m {
+    margin-left: 60px;
+}
+input {
+    height: 20px;
+    margin: 5px;
+    width: 250px;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+
+}
+.btn {
+    background-color: red;
+    width: 200px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: #fff;
+    margin-left: 100px;
+}
+
+
+
+
+.goi_tap {
+    border: solid 1px #807f7f;
+    width: 400px;
+    background-color: #fff;
+ }
+ .img {
+     width: 100%;
+ }
+ .w-goitap {
+     display: flex;
+ }
+ .content_footer {
+     display: flex;
+     justify-content: space-between;
+ }
+ .bac {
+     background-color: rgb(173, 172, 172);
+     padding-left: 20px;
+     font-size: 20px;
+     margin-top: 5px;
+     border-top-left-radius: 20px;
+     border-bottom-right-radius: 20px;
+ }
+ .vang {
+     background-color: gold;
+     padding-left: 20px;
+     font-size: 20px;
+     margin-top: 5px;
+     border-top-left-radius: 20px;
+     border-bottom-right-radius: 20px;
+ }
+ .bachkim {
+     background-color: rgb(251, 247, 225);
+     padding-left: 20px;
+     font-size: 20px;
+     margin-top: 5px;
+     border-top-left-radius: 20px;
+     border-bottom-right-radius: 20px;
+ }
+ .kimcuong {
+     background-color: black;
+     color: #fff;
+     padding-left: 20px;
+     font-size: 20px;
+     margin-top: 5px;
+     border-top-left-radius: 20px;
+     border-bottom-right-radius: 20px;
+ }
+ .price {
+     margin-left: 20px;
+     color: red;
+     margin: 0 20px 20px 20px;
+     font-size: 20px;
+ }
+ ul {
+    height: 130px;
+}
