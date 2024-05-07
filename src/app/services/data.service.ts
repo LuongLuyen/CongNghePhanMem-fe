@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,HttpErrorResponse  } from '@angular/common/http';
+import { catchError } from 'rxjs/operators';
+
 
 const api ="http://localhost:5000/api/gym"
 const apiP ="http://localhost:5000/api/register"
@@ -20,23 +22,47 @@ export class DataService {
     return this.dataSubject.asObservable();
   }
   getAllGym():any {
-    return this.http.get<any>(api);
+    return this.http.get<any>(api)
   }
   getAllPackage():any {
-    return this.http.get<any>(apiP);
+    return this.http.get<any>(apiP).pipe(
+      catchError((error: HttpErrorResponse):any => {
+        alert("Server mất kết nối")
+      })
+    )
   }
   getByIdGym(id:string):any {
     if (id){
-      return this.http.get<any>(api+"/"+id);
+      return this.http.get<any>(api+"/"+id).pipe(
+        catchError((error: HttpErrorResponse):any => {
+          alert("Server mất kết nối")
+        })
+      )
     }
   }
   postPackage(data:any):any {
-    return this.http.post<any>(apiP,data)
+    return this.http.post<any>(apiP,data).pipe(
+      catchError((error: HttpErrorResponse):any => {
+        alert("Server mất kết nối")
+      })
+    )
   }
   updatePackage(data:any,id:string):any {
-    return this.http.put<any>(apiP+"/"+id,data)
+    return this.http.put<any>(apiP+"/"+id,data).pipe(
+      catchError((error: HttpErrorResponse):any => {
+        alert("Server mất kết nối")
+      })
+    )
   }
   deletePackage(id:string):any {
-    return this.http.delete<any>(apiP+"/"+id)
+    return this.http.delete<any>(apiP+"/"+id).pipe(
+      catchError((error: HttpErrorResponse):any => {
+        alert("Server mất kết nối")
+      })
+    )
   }
 }
+function showSnackbar() {
+  throw new Error('Function not implemented.');
+}
+
