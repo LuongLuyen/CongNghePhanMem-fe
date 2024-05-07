@@ -3,6 +3,7 @@
   <div class="k">.</div>
   <div class="k">.</div>
     <table>
+      <thead>
         <tr>
           <th>STT</th>
           <th>Gói tập</th>
@@ -12,16 +13,25 @@
           <th>Sữa</th>
           <th>Xóa</th>
         </tr>
+      </thead>
+      <tbody>
+
         <tr *ngFor="let x of data;let i = index">
           <td>{{i+1}}</td>
           <td>{{x[1].goi}}</td>
           <td>{{x[0].ten}}</td>
           <td>{{x[0].email}}</td>
           <td>{{x[1].price}}</td>
-          <td><i class="fa-solid fa-pen"></i></td>
-          <td><i class="fa-solid fa-trash"></i></td>
+          <td>
+            <a (click)="click(x[0]._id+x[0].idGoiTap)" class="nav_item" routerLink="/info-register" routerLinkActive="active" ariaCurrentWhenActive="page">
+              <i class="fa-solid fa-pen"></i>
+            </a>
+          </td>
+          <td (click)="deletePackage(x[0]._id)"><i class="fa-solid fa-trash"></i></td>
         </tr>
+      </tbody>
        
       </table>
 </div>
 <app-footer/>
+<router-outlet></router-outlet>

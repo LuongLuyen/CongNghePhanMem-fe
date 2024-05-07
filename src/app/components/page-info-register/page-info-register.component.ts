@@ -24,15 +24,21 @@ export class PageInfoRegisterComponent implements OnInit {
     canNang:0,
    }
     receivedData: string | undefined;   
+    _id: string | undefined;   
     constructor(private dataService: DataService) {}
     ngOnInit() {
       this.dataService.getData().subscribe(data => {
-        if(data){
-          this.receivedData = data;
-          this.input.idGoiTap =data
-          this.dataService.getByIdGym(data).subscribe((res:any)=>{
-            this.data =res
-          });
+        if (data){
+          if(data.length === 1){
+            this.receivedData = data;
+            this.input.idGoiTap =data
+            this.dataService.getByIdGym(data).subscribe((res:any)=>{
+              this.data =res
+            });
+          }else{
+             this._id = data.slice(0,-1)
+             this.input.idGoiTap = data.slice(-1)
+          }
         }
       });
     }
@@ -41,6 +47,18 @@ export class PageInfoRegisterComponent implements OnInit {
          this.dataService.postPackage(this.input).subscribe((res:any)=>{
            if (res){
              alert("Đăng ký thành công")
+             window.location.href = "/da-dang-ky";
+           }
+         })
+       }else {
+         alert("Vui lòng nhập đầy đủ thông tin")
+       }
+      }
+    updatePackage(){
+       if(this.input.email!=="" && this.input.ten !=="" && this.input.tuoi !== 0 && this.input.chieuCao !== 0 && this.input.canNang !== 0){
+         this.dataService.updatePackage(this.input,this._id!).subscribe((res:any)=>{
+           if (res){
+             alert("Cập nhật thành công")
              window.location.href = "/da-dang-ky";
            }
          })

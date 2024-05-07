@@ -61,5 +61,52 @@
         </div>
         <div class="btn" (click)="postPackage()">Xác nhận</div>
     </div>
+    <div *ngIf="_id" class="content_info">
+        <h1 class="m">Xác nhận thông tin</h1>
+        <div class="info">
+            <div>
+                <div>Email</div>
+                <input placeholder="email@.com" [(ngModel)]="input.email"/>
+            </div>
+            <div>
+                <div>Tên</div>
+                <input placeholder="Tên" [(ngModel)]="input.ten"/>
+            </div>
+            <div>
+                <div>Tuổi</div>
+                <select  [(ngModel)]="input.tuoi">
+                    <option value="tre">16 đến 20 tuổi</option>
+                    <option value="trung nien">20 đến 50 tuổi</option>
+                    <option value="gia">trên 50 tuổi</option>
+                  </select>
+            </div>
+            <div>
+                <div>Chiều cao (cm)</div>
+                <select  [(ngModel)]="input.chieuCao">
+                    <option value="thap">dưới 150 Cm</option>
+                    <option value="cao">trên 180 Cm</option>
+                    <option value="binh thuong">150 Cm đến 180 Cm</option>
+                  </select>
+            </div>
+            <div>
+                <div>Cân nặng (Kg)</div>
+                <select  [(ngModel)]="input.canNang">
+                    <option value="gay">dưới 50 Kg</option>
+                    <option value="beo">trên 80 Kg</option>
+                    <option value="binh thuong">50 Kg đến 80Kg</option>
+                  </select>
+            </div>
+            <div>
+                <div>Gói tập</div>
+                <select  [(ngModel)]="input.idGoiTap">
+                    <option value="1">Gói bạc</option>
+                    <option value="2">Gói vàng</option>
+                    <option value="3">Gói bạch kim</option>
+                    <option value="4">Gói kim cương</option>
+                  </select>
+            </div>
+        </div>
+        <div class="btn" (click)="updatePackage()">Xác nhận</div>
+    </div>
 </div>
 <app-footer/>

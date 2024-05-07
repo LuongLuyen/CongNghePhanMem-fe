@@ -33,4 +33,10 @@ export class DataService {
   postPackage(data:any):any {
     return this.http.post<any>(apiP,data)
   }
+  updatePackage(data:any,id:string):any {
+    return this.http.put<any>(apiP+"/"+id,data)
+  }
+  deletePackage(id:string):any {
+    return this.http.delete<any>(apiP+"/"+id)
+  }
 }
