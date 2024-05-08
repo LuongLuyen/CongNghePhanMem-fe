@@ -1,0 +1,64 @@
+<div class="header">
+    <div class="name">
+        <i class="fa-brands fa-square-pied-piper black"></i>
+        GYM
+    </div>
+    <div class="vach">.</div>
+    <div class="nav">
+        <a class="nav_item" href="/">
+            <i class="fa-solid fa-house"></i>
+            <span class="n">Trang chủ</span>
+        </a>
+    </div>
+</div>
+
+<div class="wrap">
+    <div class="container">
+        <div id="slide">
+            <div class="item" style="background-image: url(.././../../assets/1t.jpg);">
+                <div class="content">
+                    <div class="name">Đăng ký ngay</div>
+                    <div class="des">Xin chào! Cảm ơn bạn đã dành thời gian để kết nối với chúng tôi. Tôi sẵn lòng hỗ trợ bạn trong mọi điều bạn cần.</div>
+                    <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">
+                        <button class="start"><span class="la">Bắt đầu</span><i class="fa-solid fa-caret-right"></i></button>
+                    </a>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(../../../assets/2t.jpg);">
+                <div class="content">
+                    <div class="name">Xin chào bạn !</div>
+                    <div class="des">Xin chào! Cảm ơn bạn đã dành thời gian để kết nối với chúng tôi. Tôi sẵn lòng hỗ trợ bạn trong mọi điều bạn cần.</div>
+                    <button>Xem thêm</button>
+                </div>
+            </div>
+           <div class="item" style="background-image: url(../../../assets/3t.webp);">
+                <div class="content">
+                    <div class="name">GYM</div>
+                    <div class="des">Xin chào! Cảm ơn bạn đã dành thời gian để kết nối với chúng tôi. Tôi sẵn lòng hỗ trợ bạn trong mọi điều bạn cần.</div>
+                    <button>Xem thêm</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(../../../assets/4t.jpg);">
+                <div class="content">
+                    <div class="name">GYM</div>
+                    <div class="des">Xin chào! Cảm ơn bạn đã dành thời gian để kết nối với chúng tôi. Tôi sẵn lòng hỗ trợ bạn trong mọi điều bạn cần.</div>
+                    <button>Xem thêm</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(../../../assets/5t.jpg);">
+                <div class="content">
+                    <div class="name">GYM</div>
+                    <div class="des">Xin chào! Cảm ơn bạn đã dành thời gian để kết nối với chúng tôi. Tôi sẵn lòng hỗ trợ bạn trong mọi điều bạn cần.</div>
+                    <button>Xem thêm</button>
+                </div>
+            </div> 
+        </div>
+        <div class="buttons">
+            <button id="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button id="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+</div>
+<div [innerHTML]="subJs"></div>
+<app-footer/>
+<router-outlet></router-outlet>

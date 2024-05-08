@@ -2,4 +2,7 @@
     background-color: rgb(216, 215, 215);
     height: 80vh;
     margin: 0 20px 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

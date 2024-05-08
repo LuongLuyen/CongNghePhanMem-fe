@@ -9,6 +9,7 @@
 }
 .k {
     height: 20px;
+    color: #fff;
 }
 ::-webkit-scrollbar {
     display: none;
@@ -28,4 +29,8 @@ table {
   
   tr:nth-child(even) {
     background-color: #dddddd;
+  }
+  thead {
+    background-color: #ad171c;
+    color: #fff;
   }
